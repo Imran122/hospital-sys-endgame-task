@@ -1,0 +1,67 @@
+footer {
+  background-color: var(--secondary-color);
+}
+
+.footer-top {
+  padding: 100px 0;
+}
+
+.footer-logo-content p,
+.footer-contact li :is(a, p),
+.footer-content :is(h3, ul li a, p),
+.copyright-text p {
+  color: var(--five-color);
+}
+
+.footer-content form input {
+  width: 100%;
+  border: 1px solid var(--five-color);
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: var(--five-color);
+}
+
+.footer-content form input,
+.footer-content form input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: var(--size-sm);
+  color: var(--secondary-color);
+}
+
+.footer-content form button {
+  background-color: var(--third-color);
+  color: var(--five-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.footer-content form button:hover {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.pages-link li a:hover {
+  margin-left: 3px;
+}
+
+.copyright-text::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.footer-logo-content img {
+  width: 80px;
+  height: 50px;
+}
