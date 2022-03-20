@@ -10,15 +10,15 @@ const Banner = () => {
             <div className="col-lg-6">
               <div className="hero-text">
                 <h1 className="text-start">
-                  Order Your Food <br /> & Enjoy The Taste
+                  Choose your Doctor <br /> & Take Our Services
                 </h1>
                 <p className="my-4">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et{" "}
+                  We probide best doctor by our hospital. The best Orthpedic
+                  doctors are available.{" "}
                 </p>
                 <div className="hero-btn">
                   <a href="#" className="rounded-pill me-4">
-                    Order Now
+                    Contact Us
                   </a>
                   <a href="#" className="rounded-pill">
                     <svg

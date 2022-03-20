@@ -11,9 +11,8 @@ const Footer = () => {
               <div className="footer-logo-content pe-lg-4">
                 <img src={logo} alt="logo" className="img-fluid" />
                 <p className="mt-3 mb-4">
-                  Lorem ipsum dolor sit amet, con sectetur adipiscing elit.
-                  Quisque id luctus mauris, eget varius libero. Vestibulum metus
-                  leo.
+                  We probide best doctor by our hospital. The best Orthpedic
+                  doctors are available.
                 </p>
                 <ul className="footer-contact mb-4">
                   <li className="d-flex align-items-center mb-3">
@@ -197,7 +196,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <div className="copyright-text text-center position-relative py-4">
-            <p>&copy; 2021 Greenmart. All rights reserved.</p>
+            <p>&copy; 2021 Ortho Hospital. All rights reserved.</p>
           </div>
         </div>
       </div>
