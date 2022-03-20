@@ -217,3 +217,13 @@ footer {
   height: 80px;
   color: #fff;
 }
+.pagination {
+  margin: 30px;
+}
+.pagination button {
+  margin-right: 30px;
+}
+.pagination .selected {
+  background-color: rgb(83, 157, 241);
+  color: white;
+}

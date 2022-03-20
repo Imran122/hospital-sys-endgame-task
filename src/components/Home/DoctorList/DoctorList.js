@@ -1,6 +1,10 @@
 import React from "react";
+import useDoctorList from "../../../hooks/useDoctorList";
 import "./DoctorList.css";
 const DoctorList = () => {
+  const [doctors, setDoctors, pageCount, displayDoctors, page, setPage] =
+    useDoctorList();
+  console.log(doctors);
   return (
     <main>
       <div
@@ -8,158 +12,45 @@ const DoctorList = () => {
         style={{ position: "relative" }}
       >
         <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              {" "}
-              <img
-                src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="clearfix mb-3">
-                  {" "}
-                  <span class="float-start badge rounded-pill bg-primary">
-                    ASUS Rog
-                  </span>{" "}
-                  <span class="float-end price-hp">12354.00€</span>{" "}
-                </div>
-                <h5 class="card-title">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quidem eaque ut eveniet aut quis rerum. Asperiores
-                  accusamus harum ducimus velit odit ut. Saepe, iste optio
-                  laudantium sed aliquam sequi.
-                </h5>
-                <div class="text-center my-4">
-                  {" "}
-                  <a href="#" class="btn btn-warning">
-                    Check offer
-                  </a>{" "}
+          {doctors.map((doctor) => (
+            <div class="col">
+              <div class="card h-100 shadow-sm">
+                {" "}
+                <img
+                  src={doctor.picture}
+                  alt="..."
+                  style={{ width: "270px", height: "262px" }}
+                />
+                <div class="card-body">
+                  <div class="clearfix mb-3">
+                    {" "}
+                    <span class="float-start badge rounded-pill bg-primary">
+                      {doctor.name}
+                    </span>{" "}
+                    <span class="float-end price-hp">{doctor.price} Taka</span>{" "}
+                  </div>
+                  <h5 class="card-title">{doctor.department}</h5>
+                  <div class="text-center my-4">
+                    {" "}
+                    <a href="#" class="btn btn-warning">
+                      Book Now
+                    </a>{" "}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              {" "}
-              <img
-                src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <div class="clearfix mb-3">
-                  {" "}
-                  <span class="float-start badge rounded-pill bg-success">
-                    12354.00€
-                  </span>{" "}
-                  <span class="float-end">
-                    <a href="#">Example</a>
-                  </span>{" "}
-                </div>
-                <h5 class="card-title">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quidem eaque ut eveniet aut quis rerum. Asperiores
-                  accusamus harum ducimus velit odit ut. Saepe, iste optio
-                  laudantium sed aliquam sequi.
-                </h5>
-                <div class="d-grid gap-2 my-4">
-                  {" "}
-                  <a href="#" class="btn btn-warning">
-                    Check offer
-                  </a>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              {" "}
-              <img
-                src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="label-top shadow-sm">Asus Rog</div>
-              <div class="card-body">
-                <div class="clearfix mb-3">
-                  {" "}
-                  <span class="float-start badge rounded-pill bg-success">
-                    12354.00€
-                  </span>{" "}
-                  <span class="float-end">
-                    <a href="#" class="small text-muted">
-                      Reviews
-                    </a>
-                  </span>{" "}
-                </div>
-                <h5 class="card-title">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quidem eaque ut eveniet aut quis rerum. Asperiores
-                  accusamus harum ducimus velit odit ut. Saepe, iste optio
-                  laudantium sed aliquam sequi.
-                </h5>
-                <div class="text-center my-4">
-                  {" "}
-                  <a href="#" class="btn btn-warning">
-                    Check offer
-                  </a>{" "}
-                </div>
-                <div class="clearfix mb-1">
-                  {" "}
-                  <span class="float-start">
-                    <i class="far fa-question-circle"></i>
-                  </span>{" "}
-                  <span class="float-end">
-                    <i class="fas fa-plus"></i>
-                  </span>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              {" "}
-              <img
-                src="https://www.freepnglogos.com/uploads/notebook-png/notebook-laptop-png-images-you-can-download-mashtrelo-14.png"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="label-top shadow-sm">DELL</div>
-              <div class="card-body">
-                <div class="clearfix mb-3">
-                  {" "}
-                  <span class="float-start price-hp">12354.00€</span>{" "}
-                  <span class="float-end">
-                    <a class="text-muted small" href="#">
-                      Reviews
-                    </a>
-                  </span>{" "}
-                </div>
-                <h5 class="card-title">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Veniam quidem eaque ut eveniet aut quis rerum. Asperiores
-                  accusamus harum ducimus velit odit ut. Saepe, iste optio
-                  laudantium sed aliquam sequi.
-                </h5>
-                <div class="text-center my-4">
-                  {" "}
-                  <a href="#" class="btn btn-warning">
-                    Check offer
-                  </a>{" "}
-                </div>
-                <div class="clearfix mb-1">
-                  {" "}
-                  <span class="float-start">
-                    <i class="far fa-question-circle"></i>
-                  </span>{" "}
-                  <span class="float-end">
-                    <i class="fas fa-plus"></i>
-                  </span>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        <div className="pagination">
+          {[...Array(pageCount).keys()].map((number) => (
+            <button
+              className={number === page ? "selected" : ""}
+              key={number}
+              onClick={() => setPage(number)}
+            >
+              {number + 1}
+            </button>
+          ))}
         </div>
       </div>
     </main>
