@@ -7,8 +7,6 @@ import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from "./components/Home/Home";
 import OurDepartment from "./components/OurDepartments/OurDepartment";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Footer from "./components/Shared/Footer/Footer";
-import Header from "./components/Shared/Header/Header";
 import TestingLab from "./components/TesttingLab/TestingLab";
 import AuthProvider from "./context/AuthProvider";
 import "./css/Form.css";
@@ -18,7 +16,6 @@ function App() {
     <div>
       <AuthProvider>
         <Router>
-          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -46,7 +43,6 @@ function App() {
               <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
-          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
