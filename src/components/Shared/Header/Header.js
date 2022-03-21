@@ -24,9 +24,9 @@ const Header = () => {
           <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a href="" class="nav-link active">
+                <Link to="/home" class="nav-link active">
                   Home
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <a href="" class="nav-link active">
@@ -34,9 +34,9 @@ const Header = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link active">
+                <Link to="/department" class="nav-link active">
                   Department
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
                 <Link to="/login" class="nav-link active">
@@ -45,7 +45,7 @@ const Header = () => {
               </li>
               <li class="nav-item">
                 {user?.email && (
-                  <button onClick={logOut} class="nav-link active">
+                  <button onClick={logOut} class="nav-link active nav-btn">
                     LogOut
                   </button>
                 )}

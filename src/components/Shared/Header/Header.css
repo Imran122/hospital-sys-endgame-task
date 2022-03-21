@@ -36,3 +36,8 @@ footer {
 .footer a {
   color: #fff;
 }
+.nav-btn {
+  background-color: #212529 !important;
+  border: none !important;
+  color: #fff !important;
+}
