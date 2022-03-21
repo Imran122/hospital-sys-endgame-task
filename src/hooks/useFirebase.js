@@ -102,6 +102,13 @@ const useFirebase = () => {
     });
     return () => unsubscribe;
   }, []);
+  //using useEffect to check and call api for checking user is admin or not
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((response) => response.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
 
   //save user to mongo DB
   const saveUser = (email, displayName, method) => {
@@ -123,6 +130,8 @@ const useFirebase = () => {
     loginUser,
     appointment,
     setAppointment,
+    admin,
+    setAdmin,
   };
 };
 export default useFirebase;

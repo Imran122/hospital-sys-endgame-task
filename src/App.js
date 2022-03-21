@@ -3,6 +3,7 @@ import "./App.css";
 import LogIn from "./components/Authentication/LogIn/LogIn";
 import Registration from "./components/Authentication/Registration/Registration";
 import BookAppointment from "./components/BookAppointment/BookAppointment";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Home from "./components/Home/Home";
 import OurDepartment from "./components/OurDepartments/OurDepartment";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -40,6 +41,9 @@ function App() {
             </Route>
             <PrivateRoute path="/appointment/:id">
               <BookAppointment></BookAppointment>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
           </Switch>
           <Footer></Footer>
