@@ -85,7 +85,10 @@ const BookAppointment = () => {
             <div class="detail-info">
               <div class="info">
                 {appointment.price > 25000 ? (
-                  <h3>Discount Bill ${result}</h3>
+                  <>
+                    <h3>Total Bill ${appointment.price}</h3>
+                    <h5>Discount Bill ${result}</h5>
+                  </>
                 ) : (
                   <h3>Total Bill ${appointment.price}</h3>
                 )}
