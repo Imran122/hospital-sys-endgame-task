@@ -105,7 +105,7 @@ const useFirebase = () => {
   //using useEffect to check and call api for checking user is admin or not
   const [admin, setAdmin] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://doctor-server23.herokuapp.com/users/${user.email}`)
       .then((response) => response.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -113,7 +113,7 @@ const useFirebase = () => {
   //save user to mongo DB
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("http://localhost:5000/users", {
+    fetch("https://doctor-server23.herokuapp.com/users", {
       method: method,
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),

@@ -19,7 +19,7 @@ const BookAppointment = () => {
   const [appointment, setAppointment] = useState(initialInfo);
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/appointment/${id}`)
+    fetch(`https://doctor-server23.herokuapp.com/appointment/${id}`)
       .then((response) => response.json())
       .then((data) => setAppointment(data));
   }, []);
@@ -59,7 +59,7 @@ const BookAppointment = () => {
       result: result,
     };
 
-    fetch("http://localhost:5000/appointmentlist", {
+    fetch("https://doctor-server23.herokuapp.com/appointmentlist", {
       method: "POST",
       headers: {
         "content-type": "application/json",

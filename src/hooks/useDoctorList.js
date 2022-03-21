@@ -9,7 +9,9 @@ const useDoctorList = () => {
   //fetch data from fajedb json file
   const size = 4;
   useEffect(() => {
-    fetch(`http://localhost:5000/doctors?page=${page}&&size=${size}`)
+    fetch(
+      `https://doctor-server23.herokuapp.com/doctors?page=${page}&&size=${size}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setDoctors(data.doctors);
