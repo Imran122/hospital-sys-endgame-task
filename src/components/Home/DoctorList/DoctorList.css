@@ -212,11 +212,6 @@
   font-weight: 900;
 }
 
-footer {
-  background: #212529;
-  height: 80px;
-  color: #fff;
-}
 .pagination {
   margin: 30px;
 }
@@ -224,6 +219,6 @@ footer {
   margin-right: 30px;
 }
 .pagination .selected {
-  background-color: rgb(83, 157, 241);
+  background: rgb(83, 157, 241);
   color: white;
 }

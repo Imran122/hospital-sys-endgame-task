@@ -19,6 +19,7 @@ const useFirebase = () => {
   const auth = getAuth();
   const [isLoading, setIsLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
+  const [appointment, setAppointment] = useState([]);
   //google signing method
   const signInWithGoogle = (location, history) => {
     setIsLoading(true);
@@ -120,6 +121,8 @@ const useFirebase = () => {
     isLoading,
     registerUser,
     loginUser,
+    appointment,
+    setAppointment,
   };
 };
 export default useFirebase;

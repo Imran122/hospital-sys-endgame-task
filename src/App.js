@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import LogIn from "./components/Authentication/LogIn/LogIn";
 import Registration from "./components/Authentication/Registration/Registration";
+import BookAppointment from "./components/BookAppointment/BookAppointment";
 import Home from "./components/Home/Home";
 import OurDepartment from "./components/OurDepartments/OurDepartment";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Footer from "./components/Shared/Footer/Footer";
 import Header from "./components/Shared/Header/Header";
 import TestingLab from "./components/TesttingLab/TestingLab";
@@ -36,6 +38,9 @@ function App() {
             <Route path="/lab">
               <TestingLab></TestingLab>
             </Route>
+            <PrivateRoute path="/appointment/:id">
+              <BookAppointment></BookAppointment>
+            </PrivateRoute>
           </Switch>
           <Footer></Footer>
         </Router>
