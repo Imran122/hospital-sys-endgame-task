@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import Footer from "../Shared/Footer/Footer";
+import Header from "../Shared/Header/Header";
 import "./BookAppointment.css";
 const BookAppointment = () => {
   const { user } = useAuth();
@@ -77,6 +79,7 @@ const BookAppointment = () => {
   };
   return (
     <>
+      <Header></Header>
       <div class="container appointment-form">
         <div class="checkout-card">
           <div class="title"></div>
@@ -173,6 +176,7 @@ const BookAppointment = () => {
           </form>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };
